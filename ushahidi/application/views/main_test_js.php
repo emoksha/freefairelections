@@ -330,7 +330,7 @@
 			for (var i=0; i<categoryIds.length; i++) {
 				$('#cat_'+categoryIds[i]).click(function(){
 					var categories = <?php echo json_encode($categories); ?>;
-					categories['0'] = ["ALL", "#990000"];
+					categories['0'] = ["ALL", "#66CC00"];
 					graphData = allGraphData[0][categories[this.id.split("_")[1]][0]];
 					var catId = categories[this.id.split("_")[1]][0];
 					gCategoryId = catId;

@@ -155,6 +155,7 @@ body.blog li.blog a {
 	clear:both;
 	width:960px;
 	background:#cc9 url(../img/content-top.gif) no-repeat;
+	float:left;
 }
 #content .content-bg {
 	padding:12px 15px 20px;
@@ -170,7 +171,7 @@ body.blog li.blog a {
 .big-block .big-block-top {
 	overflow:hidden;
 	width:100%;
-	background:url(../img/big-block-top.gif) no-repeat;
+	background:url(../img/big-block-top.gif) no-repeat;	
 }
 .big-block .big-block-bottom {
 	overflow:hidden;
@@ -370,6 +371,38 @@ body.blog li.blog a {
 	font:14px/20px Arial, Helvetica, sans-serif;
 	color:#666;
 }
+
+/*---how_to_submit---*/
+
+
+div.how_to_submit p {
+  text-align:left;
+  font-size:0.9em;
+  line-height:1.0em;
+}
+
+div.how_to_submit ol {
+  padding:0;
+  list-style: inside;
+  margin-top:0;
+}
+
+div.how_to_submit p.example {
+  font-family: monaco, courier, sans-serif;
+  background:#f3f3f3;
+  color:#333;
+  border:1px solid #000;
+  padding:10px;
+  width:240px;
+  margin-top:0;
+}
+
+div.how_to_submit h3 {
+ text-transform:uppercase;
+ font-size:1.2em;
+ color:#000;
+}
+
 /*---blocks-holder---*/
 .blocks-holder {
 	overflow:hidden;
@@ -389,6 +422,7 @@ body.blog li.blog a {
 	color:#666;
 	font:bold 14px/17px Arial, Helvetica, sans-serif;
 }
+
 .small-block h3 span {font-size:10px;}
 .small-block .block-bg {
 	overflow:hidden;
@@ -440,22 +474,137 @@ body.blog li.blog a {
 	border:none;
 	padding:0;
 }
-.small-block .block-bg ul li ul.title li {font:10px/14px Arial, Helvetica, sans-serif;}
-.small-block .block-bg a.btn-more {
-	float:right;
+
+/* --------- feeds ------- */
+
+div.feeds div.single_feed {
+  border:1px solid #c3c3c3!important;
+  background:#fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding:0 0 30px 0;
+  margin:10px 4px;
+  width:920px;
+  float:left;
+}
+
+div.feeds a.btn-more {
 	color:#fff;
 	font:bold 10px/12px Arial, Helvetica, sans-serif;
 	text-decoration:none;
 	background:#39c url(../img/filter-item-l.gif) no-repeat;
+	margin:10px 10px 30px 30px;
+	float:right;
 }
-.small-block .block-bg a.btn-more span {
-	float:left;
+
+div.feeds a.btn-more span {
 	padding:0 5px 1px;
 	cursor:pointer;
 	background:url(../img/filter-item-r.gif) no-repeat 100% 0;
 }
-.small-block .block-bg a.btn-more:hover,
-.small-block .block-bg a.btn-more:hover span {text-decoration:underline;}
+div.feeds a.btn-more:hover,
+div.feeds a.btn-more:hover span {text-decoration:underline;}
+
+div.feeds table {
+	width:900px;
+	border-top:1px solid #e5eff8;
+	border-right:1px solid #e5eff8;
+	margin:1em auto;
+	border-collapse:collapse;
+	background:#f3f3f3;
+	}
+
+  div.feeds ul {
+    list-style-type:none;
+  }
+  
+  div.feeds a img {
+    border:none;
+  }
+  
+  div.feeds li a {
+    clear:both;
+    text-decoration:none;
+    color:#c3c3c3;
+  }
+  div.feeds li a:hover {
+    clear:both;
+    text-decoration:underline;
+    color:#000;
+  }
+  
+  div.feeds li a.title {
+    display:block;
+    color:#000;
+    
+  }
+  
+  /* feed photos*/
+  
+  div.feeds ul.photos li {
+    float:left;
+    margin:10px;
+    padding:10px;
+    height:150px;
+    width:170px;
+  }
+  div.feeds ul.photos li img {
+    width:170px;
+  }
+  
+  /* feed videos*/
+
+  div.feeds ul.video li {
+    float:left;
+    margin:10px;
+    padding:10px;
+    height:200px;
+    width:250px;
+  }
+  div.feeds ul.video li img {
+    width:100px;
+  }
+  
+div.feeds h2 {
+	color: #9ba9b4;
+	font-size:1.94em;
+	letter-spacing:.1em;
+	margin:1em 0 0 0;
+	padding:0 0 0 10px;
+	caption-side:top;
+	text-align:left;
+	}	
+div.feeds tr.odd td	{
+	background:#f7fbff
+	}
+div.feeds tr.odd .column1	{
+	background:#f4f9fe;
+	}	
+div.feeds .column1	{
+	background:#f9fcfe;
+	}
+div.feeds td {
+	color:#678197;
+	border-bottom:1px solid #e5eff8;
+	border-left:1px solid #e5eff8;
+	padding:.3em 1em;
+	}				
+div.feeds th {
+	font-weight:normal;
+	color: #678197;
+	text-align:left;
+	border-bottom: 1px solid #e5eff8;
+	border-left:1px solid #e5eff8;
+	padding:.3em 1em;
+	}
+	
+div.feeds thead th {
+	background:#f4f9fe;
+	font:bold 1.2em/2em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+	color:#66a3d3
+	text-transform:uppercase;
+	}
+
 /*---alerts-block---*/
 .step-1 {
 	float:left;
@@ -871,11 +1020,11 @@ body.blog li.blog a {
 /*-----footer-----*/
 #footer {
 	clear:both;
-	width:920px;
 	padding:20px;
-	margin:0 0 30px;
+	margin:30px 0 0 0;
 	overflow:hidden;
 	background:#fff!important;
+	float:left;
 }
 #footer .footer-info {
 	float:left;

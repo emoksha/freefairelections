@@ -9,7 +9,7 @@ $lang = array(
 	'submit_shortcode' => ' VoteReport to ',
 	'submit_sms2' => 'on your phone',
 	'submit_twitter' => 'By sending a tweet with the hashtag #votereport',
-	'submit_email' => 'By sending an email to report@votereport.in',
+	'submit_email' => 'By sending an email to <a href="mailto:report@votereport.in">report@votereport.in</a>',
 	'submit_form' => 'By <a href="http://votereport.in/reports/submit">filling a form</a> at the website',
 	'submit_guide' => '<br />For more details, refer to our <a href="http://votereport.in/blog/faq/how-to-report/">reporting guide.</a>',
 	'alerts' => 'Get Alerts',
