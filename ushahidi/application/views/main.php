@@ -44,7 +44,7 @@
        <div class="grey-box-bg">
         <ul>
          <li>
-          <a class="active" id="cat_0" href="#" name="cat_0"><span style="background:no-repeat url(<?php echo url::base() . 'swatch/?c=#990000&w=16&h=16.png'?>;); background-position:left center;">All Categories</span></a>
+          <a class="active" id="cat_0" href="#" name="cat_0"><span style="background:no-repeat url(<?php echo url::base() . 'swatch/?c=#990000&w=16&h=16&.png'?>;); background-position:left center;">All Categories</span></a>
          </li><?php
               foreach ($categories as $category => $category_info)
               {
