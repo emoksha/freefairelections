@@ -102,13 +102,26 @@
      <h2>Related Videos</h2>
       
       
-      <!-- ==================== -->
-      <!-- = begin dummy feed = -->
-      <!-- ==================== -->
       
       
       <ul class="video">      
-      
+         <?php 
+          foreach ($video_feeds as $feed) {
+            $feed_id = $feed->id;
+            $feed_title = text::limit_chars($feed->item_title, 140, '...', True);
+            $feed_link = $feed->item_link;
+        ?>
+         <li class="feed_item">     
+           <object width="250" height="200"><param name="movie" value="<?php echo $feed_link; ?>"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="<?php echo $feed_link; ?>" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="250" height="200"></embed></object>
+           <a href="#" class="title"><?php echo $feed_title; ?></a>
+         </li>
+            <?php } ?>
+
+
+      <!-- ==================== -->
+      <!-- = begin dummy feed = -->
+      <!-- ==================== -->
+      <!--
          <li class="feed_item">     
            <object width="250" height="200"><param name="movie" value="http://www.youtube.com/v/ZdV37K_NlFA&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/ZdV37K_NlFA&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="250" height="200"></embed></object>
            <a href="#" class="title">Indian Elections Begin</a>
@@ -122,11 +135,13 @@
           <li class="feed_item">     
             <object width="250" height="200"><param name="movie" value="http://www.youtube.com/v/Gidhf90hbIw&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Gidhf90hbIw&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="250" height="200"></embed></object>
             <a href="#" class="title">Villagers respond to non-performing politicians</a>
-          </li>
-     </ul> 
+          </li> 
+   -->
               <!-- ================== -->
               <!-- = end dummy feed = -->
               <!-- ================== -->
+     </ul> 
+
       
       
     </div> <!-- / single_feed videos -->
@@ -199,6 +214,18 @@
       
       
       <ul class="photos">      
+   <?php 
+        foreach ($photo_feeds as $feed) {
+            $feed_id = $feed->id;
+            $feed_title = text::limit_chars($feed->item_title, 140, '...', True);
+            $feed_link = $feed->item_link;
+        ?>
+            <li class="feed_item">     
+          <a href="#"><img src="<?php echo $feed_link; ?>" width="170" height="140"/></a>
+          <a href="#" class="title"><?php echo $feed_title; ?></a>
+         </li>
+            <?php } ?>
+            <!-- 
         <li class="feed_item">     
           <a href="#"><img src="http://farm4.static.flickr.com/3306/3446469479_be9f840843.jpg"></a>
           <a href="#" class="title">Maoist attacks</a>
@@ -217,7 +244,7 @@
           <li class="feed_item">     
             <a href="#"><img src="http://www.telegraph.co.uk/telegraph/multimedia/archive/01385/varun-460_1385899c.jpg" /></a>
             <a href="#" class="title">Varun Gandhi on parole outside Lucknow prison</a>
-           </li>
+           </li> -->
 
         </ul>
       </div> <!-- single_feed photos-->

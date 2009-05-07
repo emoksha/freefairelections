@@ -1,0 +1,1 @@
+ alter table feed_item add column feed_type varchar(30) null;

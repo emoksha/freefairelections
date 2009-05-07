@@ -12,6 +12,23 @@
  * @copyright  Ushahidi - http://www.ushahidi.com
  * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL) 
  */
+
+/**
+ * Feed type value for videos
+ */
+define('FEED_TYPE_VIDEO', 'VideoReport');
+
+/**
+ * Feed type value for photos
+ */
+define('FEED_TYPE_PHOTO', 'PhotoReport');
+
+/**
+ * Feed type value for news
+ */
+define('FEED_TYPE_TEXT', 'TextReport');
+
+
 class Main_Controller extends Template_Controller {
 
     public $auto_render = TRUE;
@@ -139,9 +156,25 @@ class Main_Controller extends Template_Controller {
 
 		// Get RSS News Feeds
 		$this->template->content->feeds = ORM::factory('feed_item')
+                  ->where('feed_type',FEED_TYPE_TEXT)
 			->limit('10')
             ->orderby('item_date', 'desc')
             ->find_all();
+
+                // Get video RSS feeds
+                $this->template->content->video_feeds = ORM::factory('feed_item')
+                  ->where('feed_type',FEED_TYPE_VIDEO)
+                  ->limit('3')
+                  ->orderby('item_date','desc')
+                  ->find_all();
+
+                // Get photo RSS feeds
+                $this->template->content->photo_feeds = ORM::factory('feed_item')
+                  ->where('feed_type',FEED_TYPE_PHOTO)
+                  ->limit('4')
+                  ->orderby('item_date','desc')
+                  ->find_all();
+                
 		
 		
         // Get Slider Dates By Year
