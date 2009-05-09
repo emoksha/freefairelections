@@ -221,7 +221,7 @@
             $feed_link = $feed->item_link;
         ?>
             <li class="feed_item">     
-          <a href="#"><img src="<?php echo $feed_link; ?>" width="170" height="140"/></a>
+          <a href="<?php echo $feed_link; ?>" target="_new"><img src="<?php echo $feed_link; ?>" width="170" height="140"/></a>
           <a href="#" class="title"><?php echo $feed_title; ?></a>
          </li>
             <?php } ?>
